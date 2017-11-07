@@ -49,7 +49,7 @@ def turn(board)
   position = current_player(board)
 
   if valid_move?(board, index)
-    move(board, index, "X") && display_board(board)
+    move(board, index, position) && display_board(board)
   else
     puts "Invalid move, try again!"
     turn(board)

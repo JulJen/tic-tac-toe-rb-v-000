@@ -125,6 +125,7 @@ end
 
 
 def play(board)
+  for input in 1..10 do
   if turn(board) == won?(board)
   over?(board)
 

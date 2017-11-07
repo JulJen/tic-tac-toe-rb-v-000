@@ -126,13 +126,15 @@ end
 
 def play(board)
   turn(board)
+  if over?(board)
+  yield
 
 #     count
 # #   # num_of_turns = 0
 # #   # if num_of_turns > 10
 # #     turn(board)
 # # #     num_of_turns += 1
-#   # end
+  end
 end
 #
 #   for input in 1..10 do

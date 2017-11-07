@@ -31,6 +31,7 @@ def move(board, index, position)
   valid_move?(board, index) && board[index] = position
 end
 
+
 # if b = won?(board)
 #   board[b.first]
 # end
@@ -125,17 +126,18 @@ end
 
 
 def play(board)
-  turn(board)
+  until over?(board) == true || draw?(board) != false
+    turn(board)
+  end
   if winner(board)
-    over?(board)
-
-#     count
-# #   # num_of_turns = 0
-# #   # if num_of_turns > 10
-# #     turn(board)
-# # #     num_of_turns += 1
+    puts "Congratulations X!"
+    puts "Congratulations O!"
+  else draw?(board)
+    puts "Cat's Game!"
   end
 end
+  puts move(board, index, token = "X") && display_board(board)
+
 #
 #   for input in 1..10 do
 #

@@ -136,9 +136,9 @@ def play(board)
     puts "Cat's Game!"
   end
 end
-  puts move(board, index, token = "X") && display_board(board)
-  
-  expect(board).to match_array(["X", "O", "X", " ", " ", " ", " ", " ", " "])
+  # puts move(board, index, token = "X") && display_board(board)
+
+  # expect(board).to match_array(["X", "O", "X", " ", " ", " ", " ", " ", " "])
 #
 #   for input in 1..10 do
 #

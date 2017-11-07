@@ -125,9 +125,8 @@ end
 
 
 def play(board)
-  for input in 1..10 do
-  if turn(board) == won?(board)
-  over?(board)
+  turn(board)
+  won?(board[input]) = over?(board)
 
 #     count
 # #   # num_of_turns = 0

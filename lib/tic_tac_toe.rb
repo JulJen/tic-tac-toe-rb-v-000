@@ -23,7 +23,6 @@ end
 
 def input_to_index(input)
   input.to_i - 1
-  # input = gets.strip.to_i
 end
 
 
@@ -66,10 +65,6 @@ def turn_count(board)
 end
   count
 end
-
-
-  # count # Returns the number of turns that have been played.
-# end
 
 
 def current_player(board) # Current_player method takes in an argument of the game board

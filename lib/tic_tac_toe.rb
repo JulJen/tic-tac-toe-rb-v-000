@@ -63,7 +63,7 @@ def turn(board)
   index = input_to_index(input)
 
   if valid_move?(board, index)
-    move(board, index, token = "X") && display_board(board)
+    move(board, index, position) && display_board(board)
     # display_board(board)
     #  board[index] = input
   else

@@ -135,6 +135,7 @@ def play(board)
   else draw?(board)
     puts "Cat's Game!"
   end
+  turn(board)
 end
   # puts move(board, index, token = "X") && display_board(board)
 

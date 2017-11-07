@@ -126,7 +126,7 @@ end
 
 
 def play(board)
-  until over?(board) == true || draw?(board) != false
+  until over?(board) = true || draw?(board) != false
     turn(board)
   end
   if winner(board)
@@ -137,7 +137,8 @@ def play(board)
   end
 end
   puts move(board, index, token = "X") && display_board(board)
-
+  
+  expect(board).to match_array(["X", "O", "X", " ", " ", " ", " ", " ", " "])
 #
 #   for input in 1..10 do
 #

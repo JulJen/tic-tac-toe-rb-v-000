@@ -32,7 +32,7 @@ end
 
 
 def position_taken?(board, index)
-  !(board[index].nil? || board[index] == " ") # returns true or false based on whether that position on the board has been filled
+  !(board[index].nil? || board[index] == " ")
 end
 
 
@@ -57,42 +57,42 @@ end
 
 
 def turn_count(board)
-  count = 0 # Variable keeps track of number of turns
-  board.each do |b|  # Iterates over each member of the board array
-  if count <= 9 &&  b == "X" || b == "O" # checks to see if that element is an "X" or an "O"
-    count += 1 # If true, increments our counter variable by 1.
+  count = 0
+  board.each do |b|
+  if count <= 9 &&  b == "X" || b == "O"
+    count += 1
   end
 end
   count
 end
 
 
-def current_player(board) # Current_player method takes in an argument of the game board
+def current_player(board)
   turn_count(board).even? ? board = "X" : board = "O"
 end
 
 
-def won?(board) # won? method accepts a board as an argument
-  WIN_COMBINATIONS.detect do |w| # iterates over the possible win combinations defined in WIN_COMBINATIONS
-  board[w[0]] == board[w[1]] && board[w[2]] == board[w[0]] && position_taken?(board, w[0]) # checks if the board has the same player token in each index of a winning combination
+def won?(board)
+  WIN_COMBINATIONS.detect do |w|
+  board[w[0]] == board[w[1]] && board[w[2]] == board[w[0]] && position_taken?(board, w[0])
   end
 end
 
 
 def full?(board)
   board.all? do |b|
-  b == "X" || b == "O" #returns true if every element in the board contains either an "X" or an "O"
+  b == "X" || b == "O"
   end
 end
 
 
 def draw?(board)
-  full?(board) && !won?(board) # returns true if the board has not been won and is full, returns false if the board is not won and the board is not full, and returns false if the board is won.
+  full?(board) && !won?(board)
 end
 
 
 def over?(board)
-  full?(board) || draw?(board) || won?(board) # returns true if the board has been won, is a draw, or is full.
+  full?(board) || draw?(board) || won?(board)
 end
 
 
@@ -115,19 +115,3 @@ def play(board)
   end
   winner(board)
 end
-
-  # puts move(board, index, token = "X") && display_board(board)
-
-  # expect(board).to match_array(["X", "O", "X", " ", " ", " ", " ", " ", " "])
-#
-#   for input in 1..10 do
-#
-#     over?(board)
-#
-#   if draw?(board) != won?(board)
-#     puts "Cat's game!"
-#
-#     # winner(board)
-#   end
-#   # end
-# end

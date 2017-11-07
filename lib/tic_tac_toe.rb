@@ -46,12 +46,12 @@ def turn(board)
   puts "Welcome to Tic Tac Toe! Please enter 1-9:"
   input = gets.strip.to_i
   index = input_to_index(input)
+  position = current_player(board)
 
   if valid_move?(board, index)
     move(board, index, "X") && display_board(board)
   else
     puts "Invalid move, try again!"
-    turn_count(board)
     turn(board)
   end
 end

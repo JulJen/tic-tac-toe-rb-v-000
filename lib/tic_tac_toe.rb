@@ -113,5 +113,4 @@ def play(board)
   else draw?(board)
     puts "Cat's Game!"
   end
-  winner(board)
 end

@@ -63,8 +63,8 @@ def turn(board)
   index = input_to_index(input)
 
   if valid_move?(board, index)
-    move(board, index, "X")
-    display_board(board)
+    puts move(board, index, token = "X") && display_board(board)
+    # display_board(board)
     #  board[index] = input
   else
     puts "Invalid move, try again!"

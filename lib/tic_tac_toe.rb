@@ -126,7 +126,7 @@ end
 
 def play(board)
   turn(board)
-  if winner(board) = over?(board)
+  if winner(board) == over?(board)
     won?(board)
 
 #     count

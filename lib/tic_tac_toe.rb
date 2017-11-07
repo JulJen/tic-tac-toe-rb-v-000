@@ -126,7 +126,8 @@ end
 
 def play(board)
   turn(board)
-  won?(board[input]) = over?(board)
+  if winner(board) = over?(board)
+    won?(board)
 
 #     count
 # #   # num_of_turns = 0

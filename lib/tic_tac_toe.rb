@@ -64,8 +64,6 @@ def turn(board)
 
   if valid_move?(board, index)
     move(board, index, "X") && display_board(board)
-    # display_board(board)
-    #  board[index] = input
   else
     puts "Invalid move, try again!"
     turn_count(board)

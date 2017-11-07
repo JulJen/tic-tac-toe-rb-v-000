@@ -126,7 +126,7 @@ end
 
 
 def play(board)
-  until over?(board) == true || draw?(board) != false
+  until over?(board) !=  !draw?(board) 
     turn(board)
   end
   if winner(board)

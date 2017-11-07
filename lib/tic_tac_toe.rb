@@ -28,24 +28,9 @@ end
 
 
 def move(board, index, position)
-  valid_move?(board, index) && board[index] = position
+  board[index] = position
 end
 
-
-# if b = won?(board)
-#   board[b.first]
-# end
-# end
-
-
-# it 'allows "X" player in the bottom right and "O" in the top left ' do
-#   board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-#   move(board, 0, "O")
-#   move(board, 8, "X")
-#
-#   expect(board).to eq(["O", " ", " ", " ", " ", " ", " ", " ", "X"])
-# end
-# end
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ") # returns true or false based on whether that position on the board has been filled

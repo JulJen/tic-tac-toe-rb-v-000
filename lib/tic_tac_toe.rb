@@ -125,8 +125,8 @@ end
 
 
 def play(board)
-  turn(board)
-  if over?(board)
+  if turn(board) == won?(board)
+  over?(board)
   yield
 
 #     count
